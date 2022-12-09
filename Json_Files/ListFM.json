@@ -1,0 +1,23 @@
+{
+    "react": "React",
+    "React": "React",
+    "angular": "Angular",
+    "Angular": "Angular",
+    ".NET": ".NET",
+    ".Net": ".NET",
+    ".net": ".NET",
+    "Apache Spark": "Apache Spark",
+    "Django": "Django",
+    "ruby on rails": "Ruby on rails",
+    "Ruby on rails": "Ruby on rails",
+    "Ruby on Rails": "Ruby on rails",
+    "Pytorch": "No info",
+    "Spring": "Spring",
+    "Grails": "No info",
+    "Node": "NodeJS",
+    "nodeJS": "NodeJS",
+    "NodsJs": "NodeJS",
+    "NodsJS": "NodeJS",
+    "node.js": "NodeJS",
+    "Hadoop": "Hadoop"
+}
