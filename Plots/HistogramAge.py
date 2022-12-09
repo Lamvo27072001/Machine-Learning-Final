@@ -1,4 +1,4 @@
-# In[0]: CÀI ĐẶT THƯ VIỆN
+# In[0]: Install library
 from math import nan
 import pandas as pd
 import numpy as np
@@ -11,19 +11,19 @@ from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import OneHotEncoder      
 from statistics import mean 
 
-# In[1]: Tổng quan về đề tài:
-# Dự đoán lương của một người hoặc là làm một 
-# phần mềm, công cụ để dự đoán lương khi mik apply 
-# và mik sử dụng lương deal cho hợp lý
+# In[1]: Overview of the topic:
+# Predict one's salary or make one
+# software, tools to predict salary when mik apply
+# and mik use the deal salary properly
 
-# In[2]: LẤY DỮ LIỆU
+# In[2]: GET DATASET
 '''
-    - Dữ liệu được lấy từ Kaggle
-    Nguồn: https://www.kaggle.com/parulpandey/2020-it-salary-survey-for-eu-region
-    - Tập dữ liệu chứa những thông tin khảo sát mức lương của những nhân lực làm việc cho mảng IT ở vùng châu Âu.
-    - Tập dữ liệu nhóm em sử dụng là các thông tin khảo sát của năm 2020.
-    - Tác giả: Parul Pandey
-    - Lần cập nhật cuối của tập dữ liệu là 10 tháng trước.
+    - Data is taken from Kaggle
+    Source: https://www.kaggle.com/parulpandey/2020-it-salary-survey-for-eu-region
+    - The dataset contains salary survey information of IT personnel in Europe.
+    - The dataset used by the group is the survey information of 2020.
+    Author: Parul Pandey
+    - The last update of the dataset was 2 years ago.
 '''
 raw_data = pd.read_csv('Raw_DataSet/IT Salary Survey EU  2020.csv')
 #%%
