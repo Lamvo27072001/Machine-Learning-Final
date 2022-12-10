@@ -20,7 +20,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer  
 from sklearn.preprocessing import OneHotEncoder      
 from statistics import mean 
-
+import json
 # In[1]: Topic overview:
 # Predict one's salary or make one
 # software, tools to predict salary when applying
@@ -84,7 +84,7 @@ print(corr_matrix)
 #%%3.7.1 Implement additional data columns about programming languages
 # and add that column and programming language data:
 # Install json library to read json files as data dictionaries
-import json
+
 # Declare a data variable containing data in the form of dictionaries read from the Json file
 data=None
 file_path='Json_Files/ListofPL.json'
@@ -181,7 +181,7 @@ for x in range(num):
 raw_data["Programming languages"]=list_Programming_Languages
 
 #%%3.7.2 Add data columns and categorize frameworks or libraries
-import json
+
 data=None
 file_path='Json_Files/ListFM.json'
 # Opening JSON file
@@ -209,7 +209,7 @@ for x in range(num):
         list_Frameworks_Libraries.append(p)
 raw_data["Frameworks / Libs"]=list_Frameworks_Libraries
 #%%3.7.3 Add data columns and categorize frameworks or libraries
-import json
+
 data=None
 file_path='Json_Files/ListDB.json'
 with open(file_path) as json_file:
@@ -234,7 +234,7 @@ for x in range(num):
         list_Databases.append(p)
 raw_data["Databases"]=list_Databases
 #%%3.7.4 Add data columns and categorize data about tools and design models
-import json
+
 data=None
 file_path='Json_Files/ListDesign.json'
 with open(file_path) as json_file:
@@ -259,7 +259,7 @@ for x in range(num):
         list_Design.append(p)
 raw_data["Design"]=list_Design
 #%%3.7.5 Add data and categorize data about Cloud
-import json
+
 data=None
 file_path='Json_Files/ListCloud.json'
 with open(file_path) as json_file:
@@ -284,7 +284,7 @@ for x in range(num):
         list_CLouds.append(p)
 raw_data["Clouds"]=list_CLouds
 #%%3.7.6 Platforms
-import json
+
 data=None
 file_path='Json_Files/ListPlatform.json'
 with open(file_path) as json_file:
@@ -311,7 +311,7 @@ for x in range(num):
         list_Platforms.append(p)
 raw_data["Platform"]=list_Platforms
 #%%3.7.7 Add DevOps tools data column data
-import json
+
 data=None
 file_path='Json_Files/ListDevOps-Tools.json'
 with open(file_path) as json_file:
@@ -336,7 +336,7 @@ for x in range(num):
         list_DevOps_Tools.append(p)
 raw_data["DevOps tools"]=list_DevOps_Tools
 #%%3.7.8. Adjust data total years of experience
-import json
+
 data=None
 file_path='Json_Files/YearOfExperience.json'
 with open(file_path) as json_file:
@@ -365,7 +365,7 @@ for x in range(num):
         continue
 raw_data["Total years of experience"]=list_Year_Experience
 #%%3.7.9. Adjusting contract types data
-import json
+
 data=None
 file_path='Json_Files/TypeContract.json'
 # Opening JSON file
@@ -395,7 +395,7 @@ for x in range(num):
         continue
 raw_data["Contract duration"]=list_Contract
 #%%3.7.10. Adjust company size data
-import json
+
 data=None
 file_path='Json_Files/CompanySize.json'
 # Opening JSON file
@@ -425,7 +425,7 @@ for x in range(num):
         continue
 raw_data["Company size"]=list_Company_Size
 #%%3.7.11. Adjust company type data
-import json
+
 data=None
 file_path='Json_Files/Company_type.json'
 # Opening JSON file
@@ -455,7 +455,7 @@ for x in range(num):
         continue
 raw_data["Company type"]=list_Company_Type
 #%%3.7.12. Adjustment of support and subsidy data in 2020
-import json
+
 data=None
 file_path='Json_Files/Additional_monetary_support.json'
 with open(file_path) as json_file:
@@ -484,7 +484,7 @@ for x in range(num):
         continue
 raw_data["Have you received additional monetary support from your employer due to Work From Home? If yes, how much in 2020 in EUR"]=list_Additional_Support
 #%%3.7.13. Adjusting the data of job positions of IT human resources in Europe in 2020
-import json
+
 data=None
 file_path='Json_Files/ListPositions.json'
 # Opening JSON file
@@ -526,7 +526,7 @@ for x in range(num):
         continue
 raw_data["Position "]=list_Positions
 #%%3.7.14. Adjustment of data employment
-import json
+
 data=None
 file_path='Json_Files/ListEmployment.json'
 # Opening JSON file
@@ -558,7 +558,7 @@ for x in range(num):
         continue
 raw_data["Employment status"]=list_Employment
 #%%3.7.15. Adjust Seniority Level data:
-import json
+
 data=None
 file_path='Json_Files/ListSeniorityLevel.json'
 # Opening JSON file
@@ -617,7 +617,7 @@ if split: # Stratified sampling
         test_set = raw_data.loc[test_index]      
     
     # Plot sampling histogram in the data set
-    if 0:
+    if 1:
         raw_data["Salary_About"].hist(bins=6, figsize=(5,5)); #plt.show();
         test_set["Salary_About"].hist(bins=6, figsize=(5,5)); plt.show()
 
