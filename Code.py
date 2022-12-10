@@ -57,7 +57,7 @@ if 1:
     plt.savefig('figures/scatter_1_feat.png', format='png', dpi=300)
     plt.show()      
 
-# 3.3. Biểu đồ histogram thống kê giới tính nhân lực IT ở châu Âu năm 2020:
+# 3.3. Histogram of gender statistics of IT human resources in Europe in 2020:
 if 1:
     data = raw_data["Gender"]
     plt.hist(data,color = 'r')
@@ -694,7 +694,6 @@ print(processed_train_set_val.shape)
     + Decision tree
     + Random Forest
     + Polinomial
-    + SVM
 '''
 # 5.1 LinearRegression model
 # 5.1.1 Training: learn a linear regression hypothesis using training data 
@@ -920,3 +919,5 @@ The results are not good.
 1. Remove unusual samples
 2. Add data
 '''
+
+# %%
