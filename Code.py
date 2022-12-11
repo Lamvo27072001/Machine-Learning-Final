@@ -695,6 +695,16 @@ print(processed_train_set_val.shape)
     + Random Forest
     + Polinomial
 '''
+#%%Store models to files, to compare latter
+import joblib # new lib
+def store_model(model, model_name = ""):
+    if model_name == "": 
+        model_name = type(model).__name__
+    joblib.dump(model,'saved_objects/' + model_name + '_model.pkl')
+def load_model(model_name):
+    model = joblib.load('saved_objects/' + model_name + '_model.pkl')
+    return model
+
 # 5.1 LinearRegression model
 # 5.1.1 Training: learn a linear regression hypothesis using training data 
 from sklearn.linear_model import LinearRegression
@@ -719,17 +729,8 @@ print("Root Mean Square Error: ", rmse.round(decimals=1))
 print("Input data: \n", train_set.iloc[0:9])
 print("Predictions: ", model.predict(processed_train_set_val[0:9]).round(decimals=1))
 print("Labels:      ", list(train_set_labels[0:9]))
-
-#%% 5.1.4 Store models to files, to compare latter
-import joblib # new lib
-def store_model(model, model_name = ""):
-    if model_name == "": 
-        model_name = type(model).__name__
-    joblib.dump(model,'saved_objects/' + model_name + '_model.pkl')
-def load_model(model_name):
-    model = joblib.load('saved_objects/' + model_name + '_model.pkl')
-    return model
 store_model(model)
+
 
 
 #%% 5.2 DecisionTreeRegressor model
